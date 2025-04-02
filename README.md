@@ -5,6 +5,7 @@ The goal of this repository is to analyze the Principal Component's (PC's) from 
 The script reads PCA results from an HDF5 file, extracts the principal components (EOFs), and plots them against wavelength. You can visualize different PCA modes using the plot_pca() function.
 
 ## Usage
+To start, navigate to the top level of the PCA_analysis_SIFTER repository. Run the script from within there.
 Ensure you have installed the required dependencies (h5py, matplotlib, pathlib).
 Run the script to inspect the PCA file structure and generate plots.
 Modify the plot_pca() function call to plot a certain PCA, and determine whether to save it or not.
