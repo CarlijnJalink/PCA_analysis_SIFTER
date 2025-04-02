@@ -7,7 +7,7 @@ The script reads PCA results from an HDF5 file, extracts the principal component
 ## Usage
 Ensure you have installed the required dependencies (h5py, matplotlib, pathlib).
 Run the script to inspect the PCA file structure and generate plots.
-Modify the plot_pca() function call to view specific PCA modes.
+Modify the plot_pca() function call to plot a certain PCA, and determine whether to save it or not.
 
 ## Project Structure
 
