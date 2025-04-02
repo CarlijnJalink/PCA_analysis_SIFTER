@@ -6,7 +6,9 @@ The script reads PCA results from an HDF5 file, extracts the principal component
 
 ## Usage
 To start, navigate to the top level of the PCA_analysis_SIFTER repository. Run the script from within there.
-Ensure you have installed the required dependencies (h5py, matplotlib, pathlib).
+
+python version = 3.12. 
+Ensure you have installed the required dependencies (h5py, matplotlib, pathlib), you can do so using the environment.yml.
 Run the script to inspect the PCA file structure and generate plots.
 Modify the plot_pca() function call to plot a certain PCA, and determine whether to save it or not.
 
