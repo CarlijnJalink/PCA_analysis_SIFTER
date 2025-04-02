@@ -56,7 +56,7 @@ plt.show() # Show the plot
 """
 
 """
-def plot_pca(wavelength, EOF_data, pca_index):
+def plot_pca(wavelength, EOF_data, pca_index, save=False, file_path=None):
     """
     This function can be used to plot the PCA's against wavelength.
     
@@ -64,14 +64,27 @@ def plot_pca(wavelength, EOF_data, pca_index):
     wavelength:Array of wavelength values.
     EOF_data: Array containing 10 generated PCA's.
     pca_index (int): Index of the PCA to plot (starting from 0).
+    save: If True, saves the figure.
+    file_path: Path to the original PCA file, used for naming the saved figure.
     """
+    
+    plt.figure()
     plt.plot(wavelength, EOF_data[pca_index], label=f"PCA {pca_index + 1}")
     plt.xlabel("Wavelength (nm)")
     plt.ylabel("PCA Amplitude")
     plt.legend()
+    plt.title(f"PCA {pca_index + 1} vs. Wavelength")
+
+    # Save the figure if requested
+    if save and file_path:
+        file_stem = file_path.stem  # Extract filename without extension
+        save_path = file_path.parent / "figures" / f"{file_stem}_PCA{pca_index + 1}.png"
+        plt.savefig(save_path, dpi=300, bbox_inches="tight")
+        print(f"Figure saved: {save_path}")
+
+    # Always display the figure
     plt.show()
 
 # Example usage
-plot_pca(wavelength, EOF_data, 0)  
-plot_pca(wavelength, EOF_data, 3)  
-
+plot_pca(wavelength, EOF_data, 0, save=True, file_path=file_path_PCA_output)
+plot_pca(wavelength, EOF_data, 3, save=True, file_path=file_path_PCA_output)
