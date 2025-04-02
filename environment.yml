@@ -1,0 +1,8 @@
+name: pca_analysis_sifter
+channels:
+  - defaults
+dependencies:
+  - python=3.12
+  - h5py
+  - matplotlib
+
